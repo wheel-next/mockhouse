@@ -3,6 +3,14 @@ import tempfile
 from pathlib import Path
 
 VARIANTS_2_GENERATE = [
+    # ************************ DEVELOPER NOTE ************************ #
+    # The idea here is to provide "different architectures" which sometimes have overlapping key/val
+    # sometimes they don't. Not all architectures necessarily make sense to publish all "key/val".
+    # The point is most likely to inject all kind of weird cases that later `mockhouse` will be able
+    # to serve and PIP + Plugin can do its thing
+    #
+    # Note: Humor is absolutely an integral piece of this PEP.
+    # ************************ DEVELOPER NOTE ************************ #
     {
         "fictional_hw": {
             "architecture": "deepthought",
@@ -38,7 +46,7 @@ VARIANTS_2_GENERATE = [
 ]
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":3
 
     ___base_whl__ = Path("dist/dummy_project-0.0.1.dev1-py3-none-any.whl")
 
